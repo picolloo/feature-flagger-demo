@@ -24,6 +24,7 @@ COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 RUN gem install bundler
 RUN bundle install
+CMD bundle exec rake webpacker:install
 
 COPY . .
 
